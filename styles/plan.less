@@ -1,0 +1,87 @@
+// COLORS
+// http://flatuicolors.com
+
+@turquoise: #1abc9c;
+@greensea: #16a085;
+@emerald: #2ecc71;
+@nephritis: #27ae60;
+@peterriver: #3498db;
+@belizehole: #2980b9;
+@amethyst: #9b59b6;
+@wisteria: #8e44ad;
+@wetasphalt: #34495e;
+@midnightblue: #2c3e50;
+@sunflower: #f1c40f;
+@orange: #f39c12;
+@carrot: #e67e22;
+@pumpkin: #d35400;
+@alizarin: #e74c3c;
+@pomegranate: #c0392b;
+@clouds: #ecf0f1;
+@silver: #bdc3c7;
+@concrete: #95a5a6;
+@asbestos: #7f8c8d;
+
+@font-face {
+	font-family: Corbert;
+	src: url(Corbert.otf);
+}
+
+@echelle: 10;
+@fontsize: 5px;
+
+//CHANGE ACCORDING TO SCREENSIZE
+@largeur: 0.15;
+@hauteur: 0.2;
+
+body {
+	margin: 0;
+	width: 1920px;
+	height: 1080px;
+	background: @clouds;
+}
+
+.menu {
+	width: (@largeur)*1920px;
+	height: 1080px;
+	background-color: @midnightblue;
+	font-family: Corbert;
+	overflow: scroll;
+	& div {
+		font-size: 10px;
+		padding-left: 10px;
+		padding-top: 3px;
+		& a {
+			color: @clouds;
+			text-decoration: none;
+			&:hover {
+				color: @alizarin;
+			}
+		}
+	}
+}
+
+.stand {
+	position: absolute;
+	//CHANGE ACCORDING TO MAX SIZE OF THE MAP
+	//DIVIDE BY 2 TO CENTER THE MAP ON MAIN VIEW
+	top:10%;
+	left: 35%;
+	div {
+		margin-top: -(@echelle)*0.67px;
+		margin-left: -(@echelle)*11.99px;
+		position: absolute;
+		background-color: @peterriver;
+		border: 1px solid @belizehole;
+		font-family: Corbert;
+		font-size: @fontsize;
+		text-align: center;
+		&:hover {
+			background-color: @belizehole;
+		}
+		&.Selected {
+			background-color: @alizarin;
+			border: 1px solid @pomegranate;
+		}
+	}
+}
